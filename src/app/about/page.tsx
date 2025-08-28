@@ -36,6 +36,7 @@ export default function AboutPage() {
           alt="A diverse group of people planting trees in a field"
           data-ai-hint="team planting trees"
           fill
+          priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />

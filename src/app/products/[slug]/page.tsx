@@ -67,6 +67,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     src={img}
                     alt={`${product.name} image ${index + 1}`}
                     fill
+                    priority={index === 0}
                     className="object-cover"
                   />
                 </div>

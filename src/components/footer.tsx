@@ -17,13 +17,13 @@ export default function Footer() {
               Your one-stop shop for a sustainable lifestyle.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>

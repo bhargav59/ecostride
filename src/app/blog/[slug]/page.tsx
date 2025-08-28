@@ -66,9 +66,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <Image
             src={article.imageUrl}
             alt={article.title}
-            fill
-            className="object-cover"
+            width={800}
+            height={400}
+            className="object-cover w-full h-full"
             data-ai-hint="sustainability blog post"
+            priority
           />
         </div>
         

@@ -23,6 +23,7 @@ export default function Home() {
           alt="Sunlight filtering through a lush green forest canopy"
           data-ai-hint="forest sunlight"
           fill
+          priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />

@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 48 33% 94%;
+    --background: 48 33% 97%; /* Lighter beige for more contrast */
     --foreground: 24 10% 10%;
-    --card: 48 33% 98%;
+    --card: 48 33% 100%; /* Pure white for cards */
     --card-foreground: 24 10% 10%;
-    --popover: 48 33% 98%;
+    --popover: 48 33% 100%;
     --popover-foreground: 24 10% 10%;
     --primary: 142 60% 30%;
     --primary-foreground: 142 60% 95%;
     --secondary: 35 25% 65%;
     --secondary-foreground: 35 25% 10%;
-    --muted: 40 20% 88%;
-    --muted-foreground: 40 10% 45%;
-    --accent: 35 80% 55%;
-    --accent-foreground: 35 80% 5%;
+    --muted: 40 20% 90%; /* Slightly darker muted */
+    --muted-foreground: 24 10% 40%; /* Darker muted text */
+    --accent: 35 80% 60%; /* Slightly adjusted accent */
+    --accent-foreground: 24 10% 5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 40 20% 80%;
-    --input: 40 20% 85%;
+    --border: 40 20% 85%; /* Darker border */
+    --input: 40 20% 90%;
     --ring: 142 60% 30%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
