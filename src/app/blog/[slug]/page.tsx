@@ -62,12 +62,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </header>
 
-        <div className="relative h-96 w-full rounded-lg overflow-hidden mb-8">
+        <div className="relative h-96 w-full rounded-lg overflow-hidden mb-8 shadow-lg">
           <Image
             src={article.imageUrl}
             alt={article.title}
             fill
             className="object-cover"
+            data-ai-hint="sustainability blog post"
           />
         </div>
         

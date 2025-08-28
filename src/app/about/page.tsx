@@ -15,13 +15,13 @@ const teamMembers = [
   {
     name: 'Jasmine Green',
     role: 'Founder & CEO',
-    avatarUrl: 'https://picsum.photos/200/200?random=20',
+    avatarUrl: 'https://picsum.photos/200/200?random=130',
     bio: 'Jasmine founded EcoStride after a life-changing backpacking trip revealed the stark impact of plastic pollution. With a background in environmental science, she is the driving force behind our mission, meticulously vetting every product to ensure it meets our high standards of sustainability and quality.'
   },
   {
     name: 'Leo Rivera',
     role: 'Head of Operations',
-    avatarUrl: 'https://picsum.photos/200/200?random=21',
+    avatarUrl: 'https://picsum.photos/200/200?random=131',
     bio: 'Leo ensures that our passion for the planet translates into seamless practice. He manages our supply chain, champions our plastic-free packaging, and constantly seeks innovative ways to reduce our carbon footprint, making sure our operations are as green as our products.'
   }
 ];
@@ -32,7 +32,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] w-full bg-primary/20 flex items-center justify-center text-center">
         <Image
-          src="https://picsum.photos/1800/1000"
+          src="https://picsum.photos/1800/1000?random=2"
           alt="A diverse group of people planting trees in a field"
           data-ai-hint="team planting trees"
           fill

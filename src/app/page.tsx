@@ -19,7 +19,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full bg-primary/20">
         <Image
-          src="https://picsum.photos/1800/1200"
+          src="https://picsum.photos/1800/1200?random=1"
           alt="Sunlight filtering through a lush green forest canopy"
           data-ai-hint="forest sunlight"
           fill
