@@ -26,3 +26,10 @@ export type Category = {
   image: string;
   aiHint: string;
 };
+
+export type Testimonial = {
+  id: string;
+  name: string;
+  quote: string;
+  avatar: string;
+};

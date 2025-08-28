@@ -1,4 +1,4 @@
-import type { Product, BlogArticle, Category } from './types';
+import type { Product, BlogArticle, Category, Testimonial } from './types';
 
 export const featuredProducts: Product[] = [
   {
@@ -26,7 +26,7 @@ export const featuredProducts: Product[] = [
   {
     id: '3',
     name: 'Solid Shampoo Bar',
-    description: 'Zero-waste shampoo bar that leaves your hair soft and clean.',
+    description: 'Zero-waste shampoo that leaves your hair soft and clean.',
     price: 12.00,
     image: 'https://picsum.photos/400/400',
     aiHint: 'shampoo bar',
@@ -45,6 +45,17 @@ export const featuredProducts: Product[] = [
     category: 'Lifestyle',
     slug: 'recycled-glass-water-bottle',
   },
+  {
+    id: '5',
+    name: 'Beeswax Food Wraps',
+    description: 'A natural alternative to plastic wrap for food storage.',
+    price: 18.50,
+    image: 'https://picsum.photos/400/400',
+    aiHint: 'beeswax wraps',
+    ecoLabels: ['Plastic-Free', 'Organic'],
+    category: 'Kitchen',
+    slug: 'beeswax-food-wraps',
+  }
 ];
 
 export const featuredCategories: Category[] = [
@@ -102,4 +113,25 @@ export const blogArticles: BlogArticle[] = [
       author: 'Emily White',
       date: '2024-05-10',
     },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    name: 'Sarah K.',
+    quote: "I love that I can shop with a clear conscience. The products are high-quality, and the company's commitment to sustainability is inspiring. My go-to for eco-friendly gifts!",
+    avatar: 'https://picsum.photos/100/100',
+  },
+  {
+    id: '2',
+    name: 'Michael B.',
+    quote: "Finally, a store that gets it. The bamboo cutlery set is now a permanent fixture in my bag, and I couldn't be happier to ditch single-use plastics. Great products, great mission.",
+    avatar: 'https://picsum.photos/100/100',
+  },
+  {
+    id: '3',
+    name: 'Elena R.',
+    quote: "Shopping at EcoStride feels good. The items are beautiful, the packaging is plastic-free, and I know I'm supporting a business that truly cares about the planet. Highly recommend!",
+    avatar: 'https://picsum.photos/100/100',
+  },
 ];
