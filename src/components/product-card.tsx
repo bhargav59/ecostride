@@ -16,7 +16,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <Link href={`/products/${product.slug}`} className="block">
           <div className="relative h-64 w-full">
             <Image
-              src={product.image}
+              src={product.images[0]}
               alt={product.name}
               data-ai-hint={product.aiHint}
               fill

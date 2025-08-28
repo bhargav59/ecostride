@@ -2,12 +2,21 @@ export type Product = {
   id: string;
   name: string;
   description: string;
+  longDescription: string;
   price: number;
-  image: string;
+  images: string[];
   ecoLabels: ('Organic' | 'Recycled' | 'Vegan' | 'Fair Trade' | 'Plastic-Free')[];
   category: string;
   slug: string;
   aiHint: string;
+  careInstructions: string;
+  reviews: {
+    id: string;
+    rating: number;
+    text: string;
+    author: string;
+    date: string;
+  }[];
 };
 
 export type BlogArticle = {

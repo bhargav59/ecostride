@@ -1,85 +1,118 @@
 import type { Product, BlogArticle, Category, Testimonial } from './types';
 
-export const featuredProducts: Product[] = [
+const allProducts: Product[] = [
   {
     id: '1',
     name: 'Reusable Bamboo Cutlery Set',
     description: 'Eco-friendly cutlery set for on-the-go meals.',
+    longDescription: 'Say goodbye to single-use plastic cutlery with our beautifully crafted Bamboo Cutlery Set. This complete set includes a fork, knife, spoon, chopsticks, and a cleaning brush, all made from sustainably sourced bamboo. Lightweight and durable, it comes in a convenient canvas pouch, making it perfect for your lunch bag, backpack, or car. By choosing bamboo, you\'re opting for a fast-growing, renewable resource that requires no pesticides and minimal water.',
     price: 14.99,
-    image: 'https://picsum.photos/400/400?random=1',
+    images: ['https://picsum.photos/600/600?random=1', 'https://picsum.photos/600/600?random=18', 'https://picsum.photos/600/600?random=19'],
     aiHint: 'bamboo cutlery',
     ecoLabels: ['Plastic-Free', 'Vegan'],
     category: 'Kitchen',
     slug: 'reusable-bamboo-cutlery-set',
+    careInstructions: 'Hand wash with warm, soapy water and dry thoroughly. Avoid soaking. Not suitable for dishwasher or microwave use. The canvas pouch is machine washable on a gentle cycle.',
+    reviews: [
+        { id: 'r1', rating: 5, text: 'I take this everywhere! It\'s so convenient and I feel great not using plastic utensils.', author: 'Greta T.', date: '2024-06-12' },
+        { id: 'r2', rating: 4, text: 'Love the set, but the knife isn\'t super sharp. It\'s fine for most things though.', author: 'Alex R.', date: '2024-06-05' },
+    ],
   },
   {
     id: '2',
     name: 'Organic Cotton Tote Bag',
     description: 'A stylish and durable tote bag for your daily needs.',
+    longDescription: 'Meet your new favorite bag. Made from 100% GOTS-certified organic cotton, this tote is as sturdy as it is stylish. Its spacious interior and reinforced handles make it ideal for grocery runs, trips to the farmer\'s market, or carrying your daily essentials. Unlike conventional cotton, organic cotton is grown without harmful pesticides and fertilizers, protecting ecosystems and farmworkers.',
     price: 24.50,
-    image: 'https://picsum.photos/400/400?random=2',
+    images: ['https://picsum.photos/600/600?random=2', 'https://picsum.photos/600/600?random=20', 'https://picsum.photos/600/600?random=21'],
     aiHint: 'cotton bag',
     ecoLabels: ['Organic', 'Fair Trade'],
     category: 'Apparel',
     slug: 'organic-cotton-tote-bag',
+    careInstructions: 'Machine wash cold with like colors. Tumble dry low or hang to dry to minimize shrinkage. Iron on medium if needed.',
+    reviews: [
+      { id: 'r3', rating: 5, text: 'This tote is incredibly strong! I use it for everything. The quality is amazing.', author: 'Chloe M.', date: '2024-06-15' },
+      { id: 'r4', rating: 5, text: 'So chic and practical. I get compliments on it all the time.', author: 'Ben S.', date: '2024-06-10' },
+    ],
   },
   {
     id: '3',
     name: 'Solid Shampoo Bar',
     description: 'Zero-waste shampoo that leaves your hair soft and clean.',
+    longDescription: 'Liberate your shower from plastic bottles with our nourishing Solid Shampoo Bar. Formulated with natural ingredients like coconut oil and shea butter, it creates a rich lather that cleanses gently without stripping your hair\'s natural oils. Each bar is equivalent to 2-3 bottles of liquid shampoo, making it a fantastic value and a win for the planet. Suitable for all hair types and scented with essential oils.',
     price: 12.00,
-    image: 'https://picsum.photos/400/400?random=3',
+    images: ['https://picsum.photos/600/600?random=3', 'https://picsum.photos/600/600?random=22', 'https://picsum.photos/600/600?random=23'],
     aiHint: 'shampoo bar',
     ecoLabels: ['Plastic-Free', 'Vegan'],
     category: 'Beauty',
     slug: 'solid-shampoo-bar',
+    careInstructions: 'Wet your hair and the bar. Rub the bar directly on your scalp or between your hands to create a lather. Massage into hair and rinse thoroughly. To prolong the life of your bar, keep it dry between uses on a draining soap dish.',
+    reviews: [
+        { id: 'r5', rating: 5, text: 'My hair has never felt better! I was skeptical about a shampoo bar, but I am a total convert now.', author: 'Olivia P.', date: '2024-06-20' },
+        { id: 'r6', rating: 4, text: 'Lathers up really well and smells great. Just wish it was a little bigger.', author: 'Liam F.', date: '2024-06-18' },
+    ],
   },
   {
     id: '4',
     name: 'Recycled Glass Water Bottle',
     description: 'Stay hydrated with this beautifully designed water bottle.',
+    longDescription: 'Make a statement for sustainability with our Recycled Glass Water Bottle. Each bottle is crafted from 100% recycled glass, reducing landfill waste and the need for virgin materials. The sleek design is complemented by a sustainably sourced bamboo lid with a leak-proof silicone seal. Glass is non-porous and free from chemicals like BPA, ensuring your water tastes pure and fresh every time.',
     price: 29.99,
-    image: 'https://picsum.photos/400/400?random=4',
+    images: ['https://picsum.photos/600/600?random=4', 'https://picsum.photos/600/600?random=24', 'https://picsum.photos/600/600?random=25'],
     aiHint: 'glass bottle',
     ecoLabels: ['Recycled', 'Plastic-Free'],
     category: 'Lifestyle',
     slug: 'recycled-glass-water-bottle',
+    careInstructions: 'Glass bottle is dishwasher safe. Hand wash the bamboo lid to preserve its quality and prevent warping. Do not freeze or microwave.',
+    reviews: [
+        { id: 'r7', rating: 5, text: 'Such a beautiful bottle! It\'s heavy and feels very high-quality. Doesn\'t leak at all.', author: 'Sophia L.', date: '2024-06-21' },
+    ],
   },
   {
     id: '5',
     name: 'Beeswax Food Wraps',
     description: 'A natural alternative to plastic wrap for food storage.',
+    longDescription: 'Wrap, rinse, and reuse. Our Beeswax Food Wraps are the perfect replacement for single-use plastic wrap. Made with organic cotton, beeswax, jojoba oil, and tree resin, these wraps are pliable, washable, and compostable. Use the warmth of your hands to create a seal around sandwiches, cheese, vegetables, or a bowl. They keep food fresh naturally while letting it breathe.',
     price: 18.50,
-    image: 'https://picsum.photos/400/400?random=5',
+    images: ['https://picsum.photos/600/600?random=5', 'https://picsum.photos/600/600?random=26', 'https://picsum.photos/600/600?random=27'],
     aiHint: 'beeswax wraps',
     ecoLabels: ['Plastic-Free', 'Organic'],
     category: 'Kitchen',
     slug: 'beeswax-food-wraps',
+    careInstructions: 'Wash in cool water with mild soap and air dry. Avoid heat sources like hot water, microwaves, and ovens. With proper care, your wraps can last for up to a year. At the end of their life, they can be composted.',
+    reviews: [
+        { id: 'r8', rating: 5, text: 'These work so well! My cheese and avocados stay fresh for so much longer.', author: 'Noah G.', date: '2024-06-19' },
+        { id: 'r9', rating: 5, text: 'A total game changer for reducing plastic in my kitchen. And they smell lovely!', author: 'Isabella H.', date: '2024-06-14' },
+    ],
   }
 ];
+
+export const featuredProducts: Product[] = allProducts.slice(0, 5);
+
+export { allProducts };
 
 export const featuredCategories: Category[] = [
   {
     name: 'Home & Kitchen',
-    href: '/products/kitchen',
+    href: '/products?category=Kitchen',
     image: 'https://picsum.photos/600/600?random=6',
     aiHint: 'modern kitchen',
   },
   {
     name: 'Apparel',
-    href: '/products/apparel',
+    href: '/products?category=Apparel',
     image: 'https://picsum.photos/600/600?random=7',
     aiHint: 'sustainable fashion',
   },
   {
     name: 'Health & Beauty',
-    href: '/products/beauty',
+    href: '/products?category=Beauty',
     image: 'https://picsum.photos/600/600?random=8',
     aiHint: 'natural cosmetics',
   },
   {
     name: 'On The Go',
-    href: '/products/lifestyle',
+    href: '/products?category=Lifestyle',
     image: 'https://picsum.photos/600/600?random=9',
     aiHint: 'outdoor adventure',
   },
@@ -323,7 +356,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '3',
     name: 'Elena R.',
-    quote: "Shopping at EcoStride feels good. The items are beautiful, the packaging is plastic-free, and I know I'm supporting a business that truly cares about the planet. Highly recommend!",
+    quote: "Shopping at EcoStride feels good. The items are beautiful, a the packaging is plastic-free, and I know I'm supporting a business that truly cares about the planet. Highly recommend!",
     avatar: 'https://picsum.photos/100/100?random=17',
   },
 ];
