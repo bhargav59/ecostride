@@ -8,12 +8,33 @@ import { Star, CheckCircle } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 type ProductPageProps = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata(
+  { params }: ProductPageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const product = allProducts.find((p) => p.slug === params.slug);
+
+  if (!product) {
+    return {
+      title: 'Product Not Found',
+      description: 'The product you are looking for does not exist.',
+    };
+  }
+
+  return {
+    title: `${product.name} | EcoStride`,
+    description: `Shop our ${product.name}. ${product.description} Discover sustainable materials and benefits.`,
+  };
+}
+
 
 export async function generateStaticParams() {
   return allProducts.map((product) => ({

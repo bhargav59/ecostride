@@ -1,13 +1,19 @@
 import ProductCard from '@/components/product-card';
 import { allProducts } from '@/lib/mock-data';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'All Products | EcoStride',
+    description: 'Browse our full collection of sustainable and eco-friendly products. Find the perfect green alternatives for your home, beauty, and lifestyle needs.'
+};
 
 export default function ProductsPage() {
   return (
     <div className="container py-12 md:py-20">
       <div className="mb-12 text-center">
-        <h1 className="font-headline text-4xl font-bold md:text-5xl">All Products</h1>
+        <h1 className="font-headline text-4xl font-bold md:text-5xl">All Eco-Friendly Products</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Discover our full range of thoughtfully curated, eco-friendly products.
+          Discover our full range of thoughtfully curated, sustainable products.
         </p>
       </div>
 

@@ -6,6 +6,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { featuredProducts, testimonials } from '@/lib/mock-data';
 import ProductCard from '@/components/product-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'EcoStride | Sustainable Shopping for a Better Planet',
+    description: 'Discover high-quality, eco-friendly products for a sustainable lifestyle. Shop with purpose and join us in making a positive impact on our planet.'
+};
 
 export default function Home() {
   return (
@@ -42,13 +48,16 @@ export default function Home() {
             <p className="text-muted-foreground text-lg">
               At EcoStride, we believe that small changes can create a big impact. Our mission is to make sustainable living accessible and effortless for everyone. We carefully curate products that are not only beautiful and functional but also kind to the earth. From responsibly sourced materials to plastic-free packaging, we're committed to eco-friendly principles every step of the way.
             </p>
+             <Button asChild variant="outline" className="mt-6">
+              <Link href="/about">Learn More About Us</Link>
+            </Button>
         </div>
       </section>
 
       {/* Featured Products Section */}
       <section className="bg-primary/5 py-16 md:py-24">
         <div className="container">
-          <h2 className="mb-10 text-center font-headline text-3xl font-bold md:text-4xl">Our Top Picks For You</h2>
+          <h2 className="mb-10 text-center font-headline text-3xl font-bold md:text-4xl">Our Top Eco-Friendly Products</h2>
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -65,7 +74,7 @@ export default function Home() {
       {/* Why Eco-Friendly Matters Section */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <h2 className="mb-10 text-center font-headline text-3xl font-bold md:text-4xl">Why Choose Eco-Friendly?</h2>
+          <h2 className="mb-10 text-center font-headline text-3xl font-bold md:text-4xl">Why Choose Green Living Products?</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">

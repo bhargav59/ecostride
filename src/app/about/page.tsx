@@ -4,6 +4,12 @@ import { CheckCircle, Heart, Package, Globe } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About EcoStride | Our Mission for a Sustainable Future',
+    description: 'Learn about EcoStride\'s story, our commitment to sustainability, and our mission to make eco-friendly living accessible to everyone.'
+};
 
 const teamMembers = [
   {
@@ -61,14 +67,14 @@ export default function AboutPage() {
       {/* Sustainability Commitment Section */}
       <section id="sustainability" className="bg-primary/5 py-16 md:py-24">
         <div className="container">
-          <h2 className="mb-12 text-center font-headline text-3xl font-bold md:text-4xl">Our Commitment in Action</h2>
+          <h2 className="mb-12 text-center font-headline text-3xl font-bold md:text-4xl">Our Green Commitment in Action</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <Card className="text-center">
               <CardContent className="p-8">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
                   <Heart className="h-8 w-8" />
                 </div>
-                <h3 className="font-headline text-xl font-bold">Ethically Sourced</h3>
+                <h3 className="font-headline text-xl font-bold">Ethically Sourced Materials</h3>
                 <p className="mt-2 text-muted-foreground">We partner with suppliers who uphold fair labor practices and prioritize the well-being of their workers and communities.</p>
               </CardContent>
             </Card>
@@ -77,8 +83,8 @@ export default function AboutPage() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
                   <Package className="h-8 w-8" />
                 </div>
-                <h3 className="font-headline text-xl font-bold">Plastic-Free Packaging</h3>
-                <p className="mt-2 text-muted-foreground">From our products to your doorstep, we are committed to using 100% plastic-free, recyclable, and compostable packaging.</p>
+                <h3 className="font-headline text-xl font-bold">100% Plastic-Free Packaging</h3>
+                <p className="mt-2 text-muted-foreground">From our products to your doorstep, we are committed to using only plastic-free, recyclable, and compostable packaging.</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -117,13 +123,13 @@ export default function AboutPage() {
       {/* Join Us Section */}
       <section className="bg-primary/90 text-primary-foreground py-16 md:py-24">
           <div className="container text-center">
-              <h2 className="font-headline text-3xl font-bold md:text-4xl">Join Our Journey</h2>
+              <h2 className="font-headline text-3xl font-bold md:text-4xl">Join Our Sustainable Journey</h2>
               <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">
-                Ready to take the next step? Explore our products and discover how simple, beautiful, and impactful sustainable living can be.
+                Ready to take the next step in green living? Explore our eco-friendly products and discover how simple and beautiful sustainability can be.
               </p>
               <Button asChild className="mt-8" size="lg" variant="secondary">
                 <Link href="/products">
-                  Shop All Products
+                  Shop All Sustainable Products
                 </Link>
               </Button>
           </div>

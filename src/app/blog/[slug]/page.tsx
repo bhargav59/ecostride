@@ -2,12 +2,32 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { blogArticles } from '@/lib/mock-data';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 type BlogPostPageProps = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata(
+  { params }: BlogPostPageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const article = blogArticles.find((a) => a.slug === params.slug);
+
+  if (!article) {
+    return {
+      title: 'Article Not Found',
+      description: 'The blog article you are looking for does not exist.',
+    };
+  }
+
+  return {
+    title: `${article.title} | Eco-Log`,
+    description: article.excerpt,
+  };
+}
 
 export async function generateStaticParams() {
   return blogArticles.map((article) => ({

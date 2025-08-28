@@ -4,12 +4,18 @@ import { blogArticles } from '@/lib/mock-data';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Eco-Log | Sustainable Living Blog by EcoStride',
+    description: 'Explore our blog for green living tips, sustainability guides, product spotlights, and inspiration for an eco-friendly lifestyle.'
+};
 
 export default function BlogPage() {
   return (
     <div className="container py-12 md:py-20">
       <div className="mb-12 text-center">
-        <h1 className="font-headline text-4xl font-bold md:text-5xl">Our Eco-Log</h1>
+        <h1 className="font-headline text-4xl font-bold md:text-5xl">Our Eco-Log: A Guide to Green Living</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
           Insights and inspiration for a more sustainable life.
         </p>
