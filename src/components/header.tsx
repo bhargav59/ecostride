@@ -28,8 +28,8 @@ import { useTheme } from 'next-themes';
 const mainNav = [
   { title: 'Home', href: '/' },
   { title: 'Products', href: '/products' },
+  { title: 'About Us', href: '/about' },
   { title: 'Blog', href: '/blog' },
-  { title: 'Guides', href: '/guides' },
 ];
 
 const languages = [
@@ -151,7 +151,7 @@ export default function Header() {
             </DropdownMenu>
 
             <Button variant="ghost" size="icon" asChild>
-              <Link href="/cart">
+              <Link href="#">
                 <ShoppingCart className="h-5 w-5" />
                 <Badge className="absolute top-1 right-1 h-4 w-4 justify-center p-0 text-xs" variant="destructive">3</Badge>
                 <span className="sr-only">Shopping Cart</span>
