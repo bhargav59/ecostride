@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Leaf, Recycle, Truck, Star, Quote, ShieldCheck, PackageCheck, Globe2 } from 'lucide-react';
+import { ArrowRight, Leaf, Recycle, Truck, Star, Quote, PackageCheck, Globe2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { featuredProducts, testimonials } from '@/lib/mock-data';
@@ -62,10 +62,10 @@ export default function Home() {
             </div>
             <div className="text-center flex items-center flex-col">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
-                <ShieldCheck className="h-8 w-8" />
+                <Globe2 className="h-8 w-8" />
               </div>
-              <h3 className="font-headline text-xl font-bold">Secure & Simple Checkout</h3>
-              <p className="mt-2 text-muted-foreground max-w-xs">Shop with confidence using our secure, EU-compliant payment gateways.</p>
+              <h3 className="font-headline text-xl font-bold">Plastic-Free Packaging</h3>
+              <p className="mt-2 text-muted-foreground max-w-xs">We use only recyclable and compostable materials for all our shipments.</p>
             </div>
           </div>
         </div>

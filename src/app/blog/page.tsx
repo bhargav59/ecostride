@@ -28,8 +28,9 @@ export default function BlogPage() {
               <Image
                 src={article.imageUrl}
                 alt={article.title}
-                fill
-                className="object-cover"
+                width={600}
+                height={400}
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="flex flex-col justify-center p-8">
@@ -44,7 +45,7 @@ export default function BlogPage() {
               <p className="text-muted-foreground mb-6 line-clamp-3">{article.excerpt}</p>
               <Button asChild className="self-start">
                 <Link href={`/blog/${article.slug}`}>
-                  Read More <ArrowRight className="ml-2" />
+                  Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
