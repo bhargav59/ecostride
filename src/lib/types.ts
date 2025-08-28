@@ -18,6 +18,7 @@ export type BlogArticle = {
   slug: string;
   author: string;
   date: string;
+  content: string;
 };
 
 export type Category = {
