@@ -4,11 +4,12 @@ import { allProducts } from '@/lib/mock-data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Star, CheckCircle } from 'lucide-react';
+import { Star, CheckCircle, ShieldCheck, Truck, RefreshCw } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { Card, CardContent } from '@/components/ui/card';
 
 type ProductPageProps = {
   params: {
@@ -103,6 +104,24 @@ export default function ProductPage({ params }: ProductPageProps) {
           
           <Button size="lg" className="w-full md:w-auto">Add to Cart</Button>
           
+           {/* Trust Signals */}
+          <Card>
+            <CardContent className="p-4 space-y-3 text-sm">
+                <div className="flex items-center gap-3">
+                    <ShieldCheck className="h-6 w-6 text-primary" />
+                    <p className="text-muted-foreground">Secure checkout with EU-compliant gateways</p>
+                </div>
+                 <div className="flex items-center gap-3">
+                    <Truck className="h-6 w-6 text-primary" />
+                    <p className="text-muted-foreground">Free carbon-neutral shipping on orders over €50</p>
+                </div>
+                <div className="flex items-center gap-3">
+                    <RefreshCw className="h-6 w-6 text-primary" />
+                    <p className="text-muted-foreground">30-day hassle-free returns</p>
+                </div>
+            </CardContent>
+          </Card>
+
           <Accordion type="single" collapsible defaultValue="description" className="w-full">
             <AccordionItem value="description">
               <AccordionTrigger className="text-lg font-headline">Full Description</AccordionTrigger>
